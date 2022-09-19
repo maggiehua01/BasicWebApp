@@ -11,7 +11,7 @@ public class QueryProcessor {
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
         if (query.toLowerCase().contains("which of the following numbers is the largest")) {
-            int numberOfNums = query.toLowerCase().split(":")[0].split(",").length;
+            int numberOfNums = query.toLowerCase().split(":")[2].split(",").length;
             int[] nums = new int[numberOfNums];
             for (int i = 0; i < numberOfNums; i++) {
                 nums[i] = Integer.parseInt(query.toLowerCase().split(":")[0].split(",")[i]);
